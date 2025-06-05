@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aggiunta corso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <form action="./" method="get" >
+            <button type="submit" id="hp">
+                <img src="./images/icon.png" alt="Homepage">
+                <h1>Università</h1>
+            </button>
+        </form>
+    </header>
+    <main>
+        <div class="title">
+            <a href="./areaRiservata.php" class="funcBtns"><img src="./images/back.png" alt="Indietro" ></a>
+            <h1>Aggiunta corso</h1><br>
+        </div>
+        <form action="addCorsi.php" method="post">
+            Nome corso: <input type="text" name="nome" id="nome" placeholder="es. Letteratura italiana"><br>
+            Descrizione: <textarea name="desc" id="desc" cols="30" rows="5" placeholder="Scrivi una descrizione del corso"></textarea><br>
+            Tipologia: <select name="annSem" id="annSem">
+                <option value="Annuale">Annuale</option>
+                <option value="Semestrale">Semestrale</option>
+            </select><br>
+            Numero di studenti massimo: <input type="number" name="nMax" id="nMax"><br>
+            <input type="submit" value="Crea corso">
+        </form>
+    </main>
+</body>
+</html>

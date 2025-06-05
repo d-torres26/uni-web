@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="functions.js"></script>
+    <title>Registrazione/Accesso</title>
+</head>
+<body>
+    <header>
+        <form action="./" method="get" >
+            <button type="submit" id="hp">
+                <img src="./images/icon.png" alt="Homepage">
+                <h1>Università</h1>
+            </button>
+        </form>
+    </header>
+    <main>
+        <div id="btns">
+            <button onclick="showReg()">Registrati</button>
+            <button onclick="showAcc()">Accedi</button>
+        </div>
+        <div id="reg" hidden>
+            <div class="title">
+                <button onclick="showbtns()" class="funcBtns"><img src="./images/back.png" alt="Indietro" ></button>
+                <h1>Registrazione</h1><br>
+            </div>
+            <div id="regType">
+                <h2>Sei uno:</h2>
+                <button onclick="showStu()">Studente</button>
+                <h2 style="display: inline;">o</h2>
+                <button onclick="showPro()">Docente</button>
+            </div>
+            <form action="signin.php" method="post" id="stu" hidden>
+                <h1>Registrazione Studente</h1><br>
+                Numero di matricola: <input type="number" name="mat" id="mat" ><br>
+                Nome:<input type="text" name="fName" id="fName" placeholder="Mario"><br>
+                Cognome: <input type="text" name="lName" id="lName" placeholder="Rossi"><br>
+                Data di nascita: <input type="date" name="bdate" id="bdate"><br>
+                Email: <input type="text" name="mail" id="mail" placeholder="m.rossi@gmail.com"><br>
+                Password: <input type="password" name="pw" id="pw" placeholder="qwerty1234"><br>
+                <input type="submit" value="Registrati">
+            </form>
+            <form action="signin.php" method="post" id="pro" hidden>
+                <h1>Registrazione Docente</h1><br>
+                Nome:<input type="text" name="fName" id="fName" placeholder="Mario"><br>
+                Cognome: <input type="text" name="lName" id="lName" placeholder="Rossi"><br>
+                Data di nascita: <input type="date" name="bdate" id="bdate"><br>
+                Email: <input type="text" name="mail" id="mail" placeholder="m.rossi@gmail.com"><br>
+                Password: <input type="password" name="pw" id="pw" placeholder="qwerty1234"><br>
+                <input type="submit" value="Registrati">
+            </form>
+        </div>
+        <div id="acc" hidden>
+            <div class="title">
+                <button onclick="showbtns()" class="funcBtns"><img src="./images/back.png" alt="Indietro" ></button>
+                <h1>Accesso</h1>
+            </div>
+            <form action="signin.php" method="post">
+                Email: <input type="text" name="mail" id="mail" placeholder="m.rossi@gmail.com"><br>
+                Password: <input type="password" name="pw" id="pw" placeholder="qwerty1234"><br>
+                <input type="submit" value="Accedi">
+            </form>
+        </div>
+    </main>
+</body>
+</html>

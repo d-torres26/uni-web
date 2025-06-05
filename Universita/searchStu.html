@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricerca informazioni studenti</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="functions.js"></script>
+</head>
+<body>
+    <header>
+        <form action="./" method="get" >
+            <button type="submit" id="hp">
+                <img src="./images/icon.png" alt="Homepage">
+                <h1>Università</h1>
+            </button>
+        </form>
+    </header>
+    <main>
+        <div class="title">
+            <a href="./" class="funcBtns"><img src="./images/back.png" alt="Indietro" ></a>
+            <h1>Ricerca informazioni studenti</h1><br>
+        </div>
+        <p>Ricerca delle informazioni degli studenti con il nome o la matricola</p>
+        <div class="btns">
+            <button id="esami" onclick="showEsami()">Informazioni sugli esami</button>
+            <button id="corsi" onclick="showCorsi()">Informazioni sui corsi</button>
+            <button id="media" onclick="showMedia()">Informazioni sulla media dei voti</button>
+        </div><br>
+        <form action="./searchStu.php" method="post" id="exams" hidden>
+            <input type="hidden" name="type" value="esami">
+            Nome studente: <input type="text" name="name" id="name" placeholder="es. Mario"><br>
+            Cognome studente: <input type="text" name="lname" id="lname" placeholder="es. Rossi"><br>
+            <input type="submit" value="Ricerca esami">
+        </form>
+        <form action="./searchStu.php" method="post" id="courses" hidden>
+            <input type="hidden" name="type" value="corsi">
+            Nome studente: <input type="text" name="name" id="name" placeholder="es. Mario"><br>
+            Cognome studente: <input type="text" name="lname" id="lname" placeholder="es. Rossi"><br>
+            <input type="submit" value="Ricerca corsi">
+        </form>
+        <form action="./searchStu.php" method="post" id="avg" hidden>
+            <input type="hidden" name="type" value="media">
+            Numero di matricola studente: <input type="number" name="mat" id="mat" placeholder="es. 1111"><br>
+            <input type="submit" value="Visualizza media">
+        </form>
+    </main>
+</body>
+</html>
